@@ -1,0 +1,173 @@
+:root{
+    --main-color:#66CC99;
+    
+    /*black - #112233
+    red - #FC575E
+    blue - #44BBFF
+    green - #66CC99*/
+}
+body{
+    font-family:sans-serif;
+    background:#F0F1F5;
+    overflow-x:hidden;
+}
+
+.bar{
+    position: fixed;
+    display:inline;
+    top:0px;
+    left:0px;
+    right:0px;
+    
+    padding-left:5px;
+    padding-right:5px;
+    
+    height:20px;
+    
+    color:white;
+    background:var(--main-color);
+    
+    z-index:10;
+}
+
+.bar #logo{
+    float:left;
+}
+
+.menu_button{
+    position: fixed;
+    top:20px;
+    right:0px;
+    
+    
+    width:25px;
+    height:25px;
+    
+    color:white;
+    background:var(--main-color);
+    
+    z-index:9;
+}
+
+.menu_button #label{
+    padding-top:25%;
+    padding-left:25%;
+}
+
+.article{
+    left:10px;
+    right:10px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:30px;
+    padding-left:20px;
+    background:white;
+    
+    z-index:2;
+}
+
+.article .title{
+    color:var(--main-color);
+    font-size:130%;
+}
+
+.article .title a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.article .date{
+    padding-left:20px;
+    opacity:0.5;
+    font-size:80%;
+    margin-bottom:15px;
+}
+
+.article .content{
+    font-size:95%;
+}
+
+.article .content .content_img{
+    margin-bottom:20px;
+}
+
+.article .content .content_img img{
+    width:100%;
+    height:auto;
+}
+
+#page{
+    width:100%;
+}
+
+#menu{
+    background:var(--main-color);
+    position: fixed;
+    right:0px;
+    width:0px;
+    height:100vh;
+    z-index:7;
+}
+
+#menu_list{
+    color:white;
+    list-style-type: none;
+    font-style:bold;
+    font-size:110%;
+}
+
+#menu_list a{
+    color:inherit;
+    text-decoration:none;
+}
+
+#menu_list #footer{
+    opacity:0.5;
+    position:fixed;
+    bottom:25px;
+}
+
+/*#menu {
+  animation-name: movingBox;
+  animation-duration: 200ms;
+  
+}
+
+@keyframes movingBox {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(40px, 30px);
+    opacity: 1;
+  }
+}
+*/
+
+@media only screen and (min-width: 701px){ /* Для компов */
+.article{
+    padding-right:40px;
+}
+    
+.article .content .content_img{
+    width:75%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+}
+
+@media only screen and (max-width: 700px){ /* Для телефонов */
+.article{
+    padding-right:20px;
+}
+
+.article .content .content_img{
+    width:100%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+}
