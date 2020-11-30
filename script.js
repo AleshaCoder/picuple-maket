@@ -5,6 +5,13 @@ var is_mobile=700
 var pc_width=75;
 var pc_menu=25;
 
+if (window.screen.availWidth<is_mobile){
+    mobile=1;
+}
+else{
+    mobile=0;
+}
+
 function render() {
     document.getElementById('menu').style.transition = "all 200ms ease-in-out";
     document.getElementById('page').style.transition = "all 200ms ease-in-out";
@@ -42,13 +49,6 @@ function showHide() {
     render();
 }
 
-if(mobile!=1){
-    showHide();
-}
-else{
-    render();
-}
-
 function screen_test(){
     if (window.screen.availWidth<is_mobile){
           mobile=1;
@@ -56,6 +56,13 @@ function screen_test(){
     else{
           mobile=0;
     }
+    render();
+}
+
+if(mobile!=1){
+    showHide();
+}
+else{
     render();
 }
 
