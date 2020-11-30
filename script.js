@@ -59,4 +59,4 @@ function screen_test(){
     render();
 }
 
-setInterval(screen_test(), 500ms);
+setInterval(screen_test(), 500);
