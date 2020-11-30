@@ -14,11 +14,14 @@ function screen_test(){
     else{
           mobile=0;
     }
-    render()
+    render();
 }
 
 if(mobile!=1){
-    showHide()
+    showHide();
+}
+else{
+    render();
 }
 
 function showHide() {
