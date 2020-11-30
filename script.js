@@ -66,4 +66,4 @@ else{
     render();
 }
 
-setInterval(screen_test(), 500);
+setInterval(screen_test(), 0.5);
