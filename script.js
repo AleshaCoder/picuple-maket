@@ -1,7 +1,20 @@
 var showed=0;
 var mobile=0;
-if (window.screen.availWidth<700){
-    mobile=1;
+var is_mobile=700
+
+var pc_width=75;
+var pc_menu=25;
+
+setInterval(screen_test(), 500ms);
+
+function screen_test(){
+    if (window.screen.availWidth<is_mobile){
+          mobile=1;
+    }
+    else{
+          mobile=0;
+    }
+    render()
 }
 
 if(mobile!=1){
@@ -9,20 +22,29 @@ if(mobile!=1){
 }
 
 function showHide() {
+    if(showed!=1){
+         showed=1;
+    }
+    else{
+         showed=0;
+    }
+    render();
+}
+
+function render() {
     var obj = document.getElementById("menu"); 
     document.getElementById('menu').style.transition = "all 200ms ease-in-out";
     document.getElementById('page').style.transition = "all 200ms ease-in-out";
     if (showed != 1) { 
         if (mobile!=1){
-        document.getElementById('page').style.width = "75%";
-        document.getElementById('menu').style.width = "25%";
+        document.getElementById('page').style.width = pc_width+"%";
+        document.getElementById('menu').style.width = pc_menu+"%";
         }
         else{
         document.getElementById('page').style.width = "100%";
         document.getElementById('menu').style.width = "100%";
         }
         document.getElementById('label').innerHTML = "X"
-        showed=1;
     }
     else{
         if (mobile!=1){
@@ -34,6 +56,5 @@ function showHide() {
         document.getElementById('menu').style.width = "0px";
         }
         document.getElementById('label').innerHTML = "M"
-        showed=0;
     }
 }
