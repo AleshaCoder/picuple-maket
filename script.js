@@ -59,11 +59,11 @@ function screen_test(){
     render();
 }
 
-if(mobile!=1){
+if(mobile!=0){
     showHide();
 }
 else{
     render();
 }
 
-setInterval(screen_test(), 0.5);
+setInterval(screen_test(), 0.1);
