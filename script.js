@@ -5,37 +5,7 @@ var is_mobile=700
 var pc_width=75;
 var pc_menu=25;
 
-setInterval(screen_test(), 500ms);
-
-function screen_test(){
-    if (window.screen.availWidth<is_mobile){
-          mobile=1;
-    }
-    else{
-          mobile=0;
-    }
-    render();
-}
-
-if(mobile!=1){
-    showHide();
-}
-else{
-    render();
-}
-
-function showHide() {
-    if(showed!=1){
-         showed=1;
-    }
-    else{
-         showed=0;
-    }
-    render();
-}
-
 function render() {
-    var obj = document.getElementById("menu"); 
     document.getElementById('menu').style.transition = "all 200ms ease-in-out";
     document.getElementById('page').style.transition = "all 200ms ease-in-out";
     if (showed != 1) { 
@@ -61,3 +31,32 @@ function render() {
         document.getElementById('label').innerHTML = "M"
     }
 }
+
+function showHide() {
+    if(showed!=1){
+         showed=1;
+    }
+    else{
+         showed=0;
+    }
+    render();
+}
+
+if(mobile!=1){
+    showHide();
+}
+else{
+    render();
+}
+
+function screen_test(){
+    if (window.screen.availWidth<is_mobile){
+          mobile=1;
+    }
+    else{
+          mobile=0;
+    }
+    render();
+}
+
+setInterval(screen_test(), 500ms);
