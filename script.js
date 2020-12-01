@@ -13,8 +13,9 @@ else{
 }
 
 function render() {
-    document.getElementById('menu').style.transition = "all 200ms ease-in-out";
-    document.getElementById('page').style.transition = "all 200ms ease-in-out";
+
+//  document.getElementById('menu').style.transition = "all 200ms ease-in-out";
+//  document.getElementById('page').style.transition = "all 200ms ease-in-out";
     if (showed != 1) { 
         if (mobile!=1){
         document.getElementById('page').style.width = pc_width+"%";
