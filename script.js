@@ -1,6 +1,6 @@
 var showed=0;
 var mobile=0;
-var is_mobile=700
+var is_mobile=700;
 
 var pc_width=75;
 var pc_menu=25;
